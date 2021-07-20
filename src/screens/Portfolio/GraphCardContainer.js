@@ -11,11 +11,9 @@ import Header from "./Header";
 const GraphCardContainer = ({
   portfolio,
   showGraphCard,
-  showGreeting,
   counterValueCurrency,
 }: {
   portfolio: Portfolio,
-  showGreeting: boolean,
   showGraphCard: boolean,
   counterValueCurrency: Currency,
 }) => {
@@ -26,13 +24,7 @@ const GraphCardContainer = ({
 
   return (
     <>
-      {showGraphCard && (
-        <Header
-          nbAccounts={portfolio.accounts.length}
-          showGreeting={showGreeting}
-          showDistribution={showDistribution}
-        />
-      )}
+      {showGraphCard && <Header showDistribution={showDistribution} />}
 
       <CurrencyDownStatusAlert currencies={currencies} />
 

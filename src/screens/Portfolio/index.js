@@ -189,7 +189,6 @@ export default function PortfolioScreen({ navigation }: Props) {
           <GraphCardContainer
             counterValueCurrency={counterValueCurrency}
             portfolio={portfolio}
-            showGreeting={!areAccountsEmpty}
             showGraphCard={!areAccountsEmpty}
           />,
           StickyActions(),
